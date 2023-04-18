@@ -5,6 +5,17 @@ weighted graph, which may represent, for example, road networks. It was conceive
 """
 
 import math
+import time
+
+def calculate_time(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"Function '{func.__name__}' took {end_time - start_time:.6f} seconds to run.")
+        return result
+    return wrapper
+
 
 
 def get_link_v(v, D):
@@ -65,7 +76,7 @@ print(T)
 
 
 # second way
-
+@ calculate_time
 def dijkstra(graph, start):
     distances = {node: {} for node in graph}
     for node in graph:
