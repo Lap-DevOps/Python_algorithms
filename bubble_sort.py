@@ -11,7 +11,7 @@ N = len(a)
 
 for i in range(N - 1):
     for x in range(N - i - 1):
-        if a[x] > a[x + 1]:
+        if a[x] < a[x + 1]:
             a[x], a[x + 1] = a[x + 1], a[x]
 print(a)
 
