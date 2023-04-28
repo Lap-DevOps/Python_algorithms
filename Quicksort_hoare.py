@@ -7,7 +7,7 @@ it is slightly faster than merge sort and heapsort for randomized data, particul
 
 def quick_sort(a):
     if len(a) > 1:
-        # x = a[random.randint(0, len(a) - 1)]
+        # x = a[random.randint(0, len(a) - 1)] # can change pivot
         x = a[0]
         low = [u for u in a if u < x]
         eq = [u for u in a if u == x]
