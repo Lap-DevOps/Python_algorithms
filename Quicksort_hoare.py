@@ -4,12 +4,11 @@ Tony Hoare in 1959[1] and published in 1961.[2] It is still a commonly used algo
 it is slightly faster than merge sort and heapsort for randomized data, particularly on larger distributions.
 """
 
-import random
-
 
 def quick_sort(a):
     if len(a) > 1:
-        x = a[random.randint(0, len(a) - 1)]
+        # x = a[random.randint(0, len(a) - 1)]
+        x = a[0]
         low = [u for u in a if u < x]
         eq = [u for u in a if u == x]
         hi = [u for u in a if u > x]
